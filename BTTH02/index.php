@@ -5,7 +5,7 @@ try{
     FROM attendance a
     INNER JOIN students s ON a.ID_SinhVien = s.ID_SinhVien
     INNER JOIN classsubjects c ON a.ID_LopHocPhan = c.ID_LopHocPhan
-    ORDER BY ID_ThamDu DESC";//giảm dần
+    ORDER BY ID_ThamDu DESC";
     $stmt = $con->prepare($sql);
     $stmt->execute();
     $articles = $stmt->fetchAll();
